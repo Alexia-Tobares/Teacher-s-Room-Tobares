@@ -13,23 +13,23 @@ let calif3;
 let calif4; 
 let promedio; 
 let estado;
-
+let respuesta = "si"
 alert("Bienvenido profesor/a!")
-let respuesta = prompt("¿Esta usted registrado/a en el sistema? (si/no)")
+
 while (respuesta == "si" || respuesta == "no") {
+    respuesta = prompt("¿Esta usted registrado/a en el sistema? (si/no)")
     switch (respuesta.toLowerCase()) {
         case "no":
             crearnombre = prompt("Ingrese su nombre completo:")
             crearclave = prompt("Ingrese una clave:")
             alert("Usuario creado!")
-            respuesta = prompt("¿Esta usted registrado/a en el sistema? (si/no)")
             break;
         case "si":
             nombre = prompt("Ingrese su nombre completo:")
             clave = prompt("Ingrese su clave:")
             if (crearnombre == nombre && crearclave == clave) {
                 cantalumnos = parseInt(prompt("Ingrese la cantidad de alumnos:"))
-                for (let i = 1; i = cantalumnos; i++) {
+                for (let i = 0; i < cantalumnos; i++) {
                     nombreal = prompt("Ingrese nombre completo del alumno:");
                     calif1 = parseFloat(prompt("Ingrese la calificacion del examen 1:"))
                     calif2 = parseFloat(prompt("Ingrese la calificacion del examen 2:"))
@@ -42,9 +42,9 @@ while (respuesta == "si" || respuesta == "no") {
                         estado = "Desaprobado"
                     }
                     console.log(i + " " + nombreal + ":" + "Promedio:" + promedio + " " + "Condición:" + estado)
-                    
 
                 }
+                respuesta = prompt("¿Desea seguir utilizando la plataforma?(finalizar/si)")
             } else {
                 alert("Usuario o contraseña incorrectos!")
             }
