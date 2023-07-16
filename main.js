@@ -28,6 +28,7 @@ let respuesta = "si"
 let alumno
 let curso = []
 let promedios = []
+let mejor
 let nombreant = " "
 alert("Bienvenido profesor/a!")
 
@@ -68,7 +69,8 @@ while (respuesta == "si" || respuesta == "no") {
                     promedios.push(alumno.promedio)
                 }
                 console.log("Estudiantes profesor/a" + " " + nombre + ":" + curso)
-                console.log("Promedios en orden descendente de este curso:" + promedios.sort((a,b)=> b - a))
+                mejor = promedios.sort((a,b)=> b - a)
+                console.log("Mejor promedio de este curso:" + mejor[0])
                 nombreant = nombre
                 respuesta = prompt("¿Desea seguir utilizando la plataforma?(finalizar/si)")
             } else {
