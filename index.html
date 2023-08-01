@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Teacher's Room</title>
 </head>
 <body>
-    <script src="main.js"></script>
+    <header>
+        <section>
+            <h1>Teacher's Room</h1>
+        </section>
+    </header>
+    <main>
+        <h2>Ingresa las calificaciones que tu alumno ha tenido durante el año</h2>
+        <div id="box">
+            <div class="calif">
+                <label for="nota1">Nota 1:</label>
+                <input type="number" id="nota1" min="0" max="100" step="1" required>
+            </div>
+            <div class="calif">
+                <label for="nota2">Nota 2:</label>
+                <input type="number" id="nota2" min="0" max="100" step="1" required>
+            </div>
+            <div class="calif">
+                <label for="nota3">Nota 3:</label>
+                <input type="number" id="nota3" min="0" max="100" step="1" required>
+            </div>
+            <div class="calif">
+                <label for="nota4">Nota 4:</label>
+                <input type="number" id="nota4" min="0" max="100" step="1" required>
+            </div>
+            <button onclick="calcularPromedio()">Calcular Promedio</button>
+        </div>
+        
+        <p id="resultado"></p>
+        <script src="main.js"></script>
+    </main>
+    
 </body>
 </html>
