@@ -1,4 +1,51 @@
 let estado
+let inicio = document.getElementById("pag")
+let formulario = document.getElementById("formulario")
+inicio.style.visibility = "hidden"
+
+const nombre = document.getElementById("username");
+const clave = document.getElementById("clave");
+const button = document.getElementById("button");
+const button2 = document.getElementById("button2");
+
+button2.addEventListener("click", (e) =>{ 
+    e.preventDefault()
+    localStorage.setItem("docente", nombre.value)
+    localStorage.setItem("clave", clave.value)
+    Toastify({
+        text: "Usuario registrado",
+        duration: 3000,
+        gravity: "bottom",
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          }
+        }).showToast();
+})
+
+function error(){
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Usuario o contraseña incorrecta',
+        showConfirmButton: false,
+        timer: 1800
+      })
+}
+
+function validar(docente, nombre, clav, clave){
+    ((docente == nombre.value) && (clav == clave.value)) ? (formulario.remove(), inicio.style.visibility = "visible") : error();
+}
+
+button.addEventListener("click", (e) =>{ 
+    e.preventDefault()
+    let docente = localStorage.getItem("docente")
+    let clav = localStorage.getItem("clave")
+    validar(docente, nombre, clav, clave)
+    }
+    
+)
+
+
 document.addEventListener("DOMContentLoaded", function () {
     cargarNotas();
 });

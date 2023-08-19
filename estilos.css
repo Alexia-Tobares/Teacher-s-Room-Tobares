@@ -22,13 +22,13 @@ main{
     height: 400px;
 }
 
-main h2{
+main #pag h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     color: darkgreen;
 }
 
-main #box{
+main #pag #box{
     display:inline-block;
     margin: 60px 580px 60px 580px;
     border: 1px darkgreen solid;
@@ -38,11 +38,11 @@ main #box{
     border-radius: 8px;
 }
 
-main #box .calif{
+main #pag #box .calif{
     margin: 5px;
 }
 
-main div button{
+main #pag button{
     background-color: #667761;
     color: white;
     padding: 10px;
@@ -53,11 +53,59 @@ main div button{
     font-size: 17px;
 }
 
-main #resultado{
+main #pag #resultado{
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #a1ef8ba2;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
+}
+
+main #formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 500px 0px 500px;
+    border: 1px darkgreen double;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #A1EF8B;
+}
+
+main #formulario label h3{
+    padding: 10px;
+}
+
+main #formulario #button{
+    margin-top: 30px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+main #formulario #button2{
+    margin: 15px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+main #formulario label input{
+    font-size: 15px;
+    padding: 5px;
+}
+
+main #formulario button{
+    background-color: #667761;
+    color: white;
+    padding: 10px;
+    margin: 15px 0px 0px 0px;
+    border: 1px #667761 solid;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
