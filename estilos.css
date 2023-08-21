@@ -60,6 +60,7 @@ main #pag #resultado{
     background-color: #a1ef8ba2;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
 main #formulario{
@@ -108,4 +109,19 @@ main #formulario button{
     border-radius: 5px;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 17px;
+}
+
+main #pag #dato{
+    background-color: #667761;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    border: 1px #667761 solid;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 }

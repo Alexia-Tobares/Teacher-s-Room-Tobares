@@ -2,18 +2,18 @@ let estado
 let inicio = document.getElementById("pag")
 let formulario = document.getElementById("formulario")
 inicio.style.visibility = "hidden"
-
 const nombre = document.getElementById("username");
 const clave = document.getElementById("clave");
 const button = document.getElementById("button");
 const button2 = document.getElementById("button2");
+let dato = document.getElementById("dato");
 
 button2.addEventListener("click", (e) =>{ 
     e.preventDefault()
     localStorage.setItem("docente", nombre.value)
     localStorage.setItem("clave", clave.value)
     Toastify({
-        text: "Usuario registrado",
+        text: "Usuario registrado!",
         duration: 3000,
         gravity: "bottom",
         style: {
@@ -21,6 +21,7 @@ button2.addEventListener("click", (e) =>{
           }
         }).showToast();
 })
+
 
 function error(){
     Swal.fire({
@@ -76,3 +77,24 @@ function cargarNotas() {
         document.getElementById("nota4").value = notas.nota4;
     }
 }
+
+dato.addEventListener("click", (e) =>{
+    e.preventDefault()
+    const number = 28;
+    const apiUrl = `http://numbersapi.com/${number}`;
+
+    fetch(apiUrl)
+        .then(response =>
+            response.ok ? response.text() : Promise.reject(`Error de red - Código: ${response.status}`)
+        )
+        .then(data => {
+            Swal.fire({
+                title: 'Dato del número ' + number,
+                text: data,
+                icon: 'info'
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+})
